@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Health, safety and quality: safety helmet and assurance shield">
+  <defs>
+    <linearGradient id="bgS" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f574f"/><stop offset="1" stop-color="#1a322e"/></linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgS)"/>
+  <circle cx="400" cy="300" r="210" fill="#24433f"/>
+  <circle cx="400" cy="300" r="210" fill="none" stroke="#c9a24b" stroke-width="3" opacity="0.4"/>
+  <!-- safety helmet -->
+  <g transform="translate(400 250)">
+    <path d="M-120 70 a120 105 0 0 1 240 0 Z" fill="#c9a24b"/>
+    <path d="M-30 -34 a30 60 0 0 1 60 0 v34 h-60 Z" fill="#a9812f"/>
+    <rect x="-150" y="64" width="300" height="26" rx="13" fill="#e4c578"/>
+    <g stroke="#a9812f" stroke-width="6" fill="none"><path d="M-70 10 q70 -60 140 0"/></g>
+  </g>
+  <!-- assurance shield with check -->
+  <g transform="translate(400 430)">
+    <path d="M0 -60 L70 -34 V6 C70 46 40 74 0 90 C-40 74 -70 46 -70 6 V-34 Z" fill="#24433f" stroke="#c9a24b" stroke-width="6"/>
+    <path d="M-28 8 l18 20 l38 -44" fill="none" stroke="#e4c578" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <rect x="0" y="560" width="800" height="40" fill="#142822"/>
+  <rect x="0" y="560" width="800" height="6" fill="#c9a24b" opacity="0.6"/>
+</svg>

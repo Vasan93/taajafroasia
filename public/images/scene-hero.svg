@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Construction skyline at dusk with a tower crane">
+  <defs>
+    <linearGradient id="skyHero" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f6f65"/><stop offset="1" stop-color="#1a322e"/></linearGradient>
+  </defs>
+  <rect width="1600" height="600" fill="url(#skyHero)"/>
+  <circle cx="1180" cy="200" r="120" fill="#c9a24b" opacity="0.85"/>
+  <circle cx="1180" cy="200" r="170" fill="#e4c578" opacity="0.14"/>
+  <!-- far skyline -->
+  <g fill="#24433f" opacity="0.8">
+    <rect x="60" y="360" width="120" height="240"/><rect x="200" y="300" width="90" height="300"/><rect x="320" y="400" width="110" height="200"/>
+    <rect x="1360" y="320" width="130" height="280"/><rect x="1500" y="380" width="90" height="220"/>
+  </g>
+  <!-- mid buildings -->
+  <g fill="#2f574f">
+    <rect x="520" y="260" width="150" height="340"/><rect x="700" y="200" width="130" height="400"/><rect x="980" y="300" width="150" height="300"/>
+  </g>
+  <!-- window grids -->
+  <g fill="#8fb3a8" opacity="0.55">
+    <rect x="540" y="290" width="18" height="24"/><rect x="575" y="290" width="18" height="24"/><rect x="610" y="290" width="18" height="24"/>
+    <rect x="540" y="340" width="18" height="24"/><rect x="575" y="340" width="18" height="24"/><rect x="610" y="340" width="18" height="24"/>
+    <rect x="720" y="240" width="18" height="24"/><rect x="755" y="240" width="18" height="24"/><rect x="790" y="240" width="18" height="24"/>
+    <rect x="720" y="300" width="18" height="24"/><rect x="755" y="300" width="18" height="24"/><rect x="790" y="300" width="18" height="24"/>
+    <rect x="1000" y="340" width="18" height="24"/><rect x="1040" y="340" width="18" height="24"/><rect x="1080" y="340" width="18" height="24"/>
+  </g>
+  <!-- building under construction (frame) -->
+  <g stroke="#c9a24b" stroke-width="6" fill="none" opacity="0.9">
+    <rect x="850" y="150" width="120" height="450"/><line x1="910" y1="150" x2="910" y2="600"/>
+    <line x1="850" y1="230" x2="970" y2="230"/><line x1="850" y1="310" x2="970" y2="310"/><line x1="850" y1="390" x2="970" y2="390"/><line x1="850" y1="470" x2="970" y2="470"/>
+  </g>
+  <!-- tower crane -->
+  <g stroke="#c9a24b" stroke-width="8" fill="none" stroke-linejoin="round" opacity="0.95">
+    <line x1="1030" y1="600" x2="1030" y2="110"/><line x1="1000" y1="140" x2="1300" y2="140"/>
+    <line x1="1030" y1="110" x2="880" y2="140"/><line x1="1030" y1="110" x2="1180" y2="132"/>
+  </g>
+  <line x1="1260" y1="140" x2="1260" y2="250" stroke="#1a322e" stroke-width="4"/>
+  <rect x="1244" y="250" width="32" height="22" fill="#1a322e"/>
+  <rect x="0" y="580" width="1600" height="20" fill="#142822"/>
+</svg>

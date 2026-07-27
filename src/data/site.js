@@ -27,26 +27,26 @@ export const offices = [
   },
 ]
 
-// Hero carousel slides (homepage). `bg` is a CSS gradient in brand colours —
-// swap for a real photo by appending: `, url(/images/hero1.jpg)`.
+// Hero carousel slides (homepage). `bg` layers a dark overlay over a scene image
+// so the headline stays readable. Swap the url for your own photo any time.
 export const heroSlides = [
   {
     kicker: 'Construction & MEP Engineering',
     title: 'Building With Precision & Purpose',
     text: 'Integrated construction and mechanical, electrical & plumbing solutions engineered to international standards.',
-    bg: 'linear-gradient(120deg, rgba(26,50,46,0.92), rgba(36,67,63,0.70)), linear-gradient(120deg, #2f574f, #1a322e)',
+    bg: 'linear-gradient(120deg, rgba(23,47,43,0.92), rgba(36,67,63,0.62)), url(/images/scene-hero.svg)',
   },
   {
     kicker: 'MEP Building Services',
     title: 'Engineering Systems That Perform',
     text: 'Design, installation, testing and commissioning of complete MEP systems for every sector.',
-    bg: 'linear-gradient(120deg, rgba(26,50,46,0.92), rgba(36,67,63,0.66)), linear-gradient(120deg, #35625a, #1a322e)',
+    bg: 'linear-gradient(120deg, rgba(23,47,43,0.90), rgba(47,87,79,0.60)), url(/images/scene-hero.svg)',
   },
   {
     kicker: 'Construction & Civil Works',
     title: 'From Groundworks to Handover',
     text: 'Turnkey construction and civil works delivered safely, on schedule and to specification.',
-    bg: 'linear-gradient(120deg, rgba(20,40,36,0.93), rgba(36,67,63,0.66)), linear-gradient(120deg, #274a44, #142822)',
+    bg: 'linear-gradient(120deg, rgba(20,40,36,0.93), rgba(36,67,63,0.58)), url(/images/scene-hero.svg)',
   },
 ]
 
@@ -101,12 +101,12 @@ export const projects = [
 // Gallery strip — image tiles. Drop real photos in /public/images and set
 // `img` to e.g. '/images/gallery-1.jpg' to replace the branded placeholder.
 export const gallery = [
-  { caption: 'On-Site Construction', tag: 'Construction', img: null },
-  { caption: 'MEP Installation', tag: 'Engineering', img: null },
-  { caption: 'HVAC Systems', tag: 'Mechanical', img: null },
-  { caption: 'Electrical Works', tag: 'Electrical', img: null },
-  { caption: 'Project Delivery', tag: 'Management', img: null },
-  { caption: 'Civil & Structural Works', tag: 'Construction', img: null },
+  { caption: 'On-Site Construction', tag: 'Construction', img: '/images/gallery-construction.svg' },
+  { caption: 'MEP Installation', tag: 'Engineering', img: '/images/gallery-mep.svg' },
+  { caption: 'HVAC Systems', tag: 'Mechanical', img: '/images/gallery-hvac.svg' },
+  { caption: 'Electrical Works', tag: 'Electrical', img: '/images/gallery-electrical.svg' },
+  { caption: 'Project Delivery', tag: 'Management', img: '/images/gallery-delivery.svg' },
+  { caption: 'Civil & Structural Works', tag: 'Construction', img: '/images/gallery-civil.svg' },
 ]
 
 // About page — values.
@@ -117,5 +117,13 @@ export const values = [
   { title: 'Innovation', text: 'We adopt modern methods and engineering tools to build smarter and reduce risk.' },
 ]
 
-// Client logos band — text placeholders; replace with real logo images later.
-export const clients = ['Client One', 'Client Two', 'Client Three', 'Client Four', 'Client Five', 'Client Six']
+// Client logos band — placeholder company names (invented). Replace with your
+// real clients, or swap for logo images later.
+export const clients = [
+  'Horizon Developments',
+  'Banadir Properties',
+  'Shabelle Group',
+  'Marodi Real Estate',
+  'Coastline Holdings',
+  'Juba Construction Co.',
+]

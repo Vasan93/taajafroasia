@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="HVAC ductwork with a rooftop air handling unit">
+  <defs>
+    <linearGradient id="skyH" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef3f1"/><stop offset="1" stop-color="#dbe6e1"/></linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#skyH)"/>
+  <!-- main duct -->
+  <rect x="40" y="220" width="520" height="90" fill="#2f574f"/>
+  <g stroke="#1a322e" stroke-width="4"><line x1="170" y1="220" x2="170" y2="310"/><line x1="300" y1="220" x2="300" y2="310"/><line x1="430" y1="220" x2="430" y2="310"/></g>
+  <!-- down drops with louver vents -->
+  <g fill="#24433f"><rect x="120" y="310" width="80" height="120"/><rect x="360" y="310" width="80" height="120"/></g>
+  <g stroke="#c9a24b" stroke-width="5"><line x1="128" y1="360" x2="192" y2="360"/><line x1="128" y1="380" x2="192" y2="380"/><line x1="128" y1="400" x2="192" y2="400"/>
+  <line x1="368" y1="360" x2="432" y2="360"/><line x1="368" y1="380" x2="432" y2="380"/><line x1="368" y1="400" x2="432" y2="400"/></g>
+  <!-- airflow -->
+  <g stroke="#c9a24b" stroke-width="4" fill="none" opacity="0.8" stroke-linecap="round">
+    <path d="M150 450 q20 20 40 0"/><path d="M150 470 q20 20 40 0"/><path d="M390 450 q20 20 40 0"/><path d="M390 470 q20 20 40 0"/>
+  </g>
+  <!-- rooftop unit -->
+  <rect x="590" y="250" width="170" height="140" rx="8" fill="#2f574f"/>
+  <rect x="590" y="250" width="170" height="26" fill="#1a322e"/>
+  <circle cx="675" cy="330" r="46" fill="#24433f" stroke="#c9a24b" stroke-width="6"/>
+  <g fill="#c9a24b"><path d="M675 330 L675 290 Q695 300 690 322 Z"/><path d="M675 330 L712 348 Q698 366 680 352 Z"/><path d="M675 330 L640 355 Q630 335 656 328 Z"/></g>
+  <circle cx="675" cy="330" r="8" fill="#e4c578"/>
+  <!-- ground -->
+  <rect x="0" y="490" width="800" height="110" fill="#24433f"/>
+  <rect x="0" y="490" width="800" height="8" fill="#c9a24b" opacity="0.6"/>
+</svg>

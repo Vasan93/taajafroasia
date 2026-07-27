@@ -73,7 +73,7 @@ export default function Home() {
             </p>
             <Link to="/about" className="btn btn-dark">More About Us</Link>
           </div>
-          <div className="media" />
+          <div className="media media--photo" style={{ backgroundImage: 'url(/images/scene-about.svg)' }} />
         </div>
       </section>
 

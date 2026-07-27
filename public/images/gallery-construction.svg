@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Building under construction with a tower crane">
+  <defs>
+    <linearGradient id="skyC" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eef3f1"/><stop offset="1" stop-color="#d5e2dd"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#skyC)"/>
+  <circle cx="650" cy="120" r="56" fill="#e4c578" opacity="0.85"/>
+  <!-- distant buildings -->
+  <g fill="#c3d3cd">
+    <rect x="60" y="300" width="90" height="200"/><rect x="160" y="340" width="70" height="160"/>
+    <rect x="600" y="320" width="120" height="180"/>
+  </g>
+  <!-- main building under construction -->
+  <rect x="250" y="200" width="230" height="320" fill="#2f574f"/>
+  <g stroke="#1a322e" stroke-width="3">
+    <line x1="250" y1="270" x2="480" y2="270"/><line x1="250" y1="340" x2="480" y2="340"/>
+    <line x1="250" y1="410" x2="480" y2="410"/><line x1="250" y1="480" x2="480" y2="480"/>
+    <line x1="330" y1="200" x2="330" y2="520"/><line x1="410" y1="200" x2="410" y2="520"/>
+  </g>
+  <g fill="#8fb3a8" opacity="0.85">
+    <rect x="270" y="285" width="42" height="38"/><rect x="350" y="285" width="42" height="38"/><rect x="430" y="285" width="34" height="38"/>
+    <rect x="270" y="355" width="42" height="38"/><rect x="350" y="355" width="42" height="38"/><rect x="430" y="355" width="34" height="38"/>
+    <rect x="270" y="425" width="42" height="38"/><rect x="350" y="425" width="42" height="38"/><rect x="430" y="425" width="34" height="38"/>
+  </g>
+  <!-- unfinished top: frame beams -->
+  <g stroke="#c9a24b" stroke-width="6" fill="none">
+    <rect x="250" y="150" width="230" height="50"/><line x1="330" y1="150" x2="330" y2="200"/><line x1="410" y1="150" x2="410" y2="200"/>
+  </g>
+  <!-- tower crane -->
+  <g stroke="#c9a24b" stroke-width="7" fill="none" stroke-linejoin="round">
+    <line x1="540" y1="520" x2="540" y2="90"/>
+    <line x1="520" y1="110" x2="720" y2="110"/>
+    <line x1="540" y1="90" x2="440" y2="110"/><line x1="540" y1="90" x2="640" y2="105"/>
+  </g>
+  <line x1="700" y1="110" x2="700" y2="200" stroke="#1a322e" stroke-width="3"/>
+  <rect x="686" y="200" width="28" height="20" fill="#1a322e"/>
+  <!-- ground -->
+  <rect x="0" y="520" width="800" height="80" fill="#24433f"/>
+  <rect x="0" y="520" width="800" height="8" fill="#c9a24b" opacity="0.6"/>
+</svg>

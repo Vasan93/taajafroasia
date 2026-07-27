@@ -9,7 +9,7 @@ export default function About() {
 
       <section className="section">
         <div className="container split">
-          <div className="media" />
+          <div className="media media--photo" style={{ backgroundImage: 'url(/images/scene-team.svg)' }} />
           <div>
             <div className="kicker">Our Story</div>
             <h2>Engineering Partners You Can Rely On</h2>
@@ -74,7 +74,7 @@ export default function About() {
               <em>Placeholder: list your ISO certifications, licenses and HSE accreditations here.</em>
             </p>
           </div>
-          <div className="media" />
+          <div className="media media--photo" style={{ backgroundImage: 'url(/images/scene-hse.svg)' }} />
         </div>
       </section>
     </>
