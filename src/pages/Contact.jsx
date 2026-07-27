@@ -4,13 +4,31 @@ import { company, offices } from '../data/site'
 import { Icon } from '../components/Icons'
 
 export default function Contact() {
-  const [sent, setSent] = useState(false)
+  const [status, setStatus] = useState('idle') // idle | sending | sent | error
+  const [error, setError] = useState('')
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    // Placeholder: no backend yet. Wire this to an email service
-    // (e.g. Formspree, Vercel serverless function, or your own API).
-    setSent(true)
+    setStatus('sending')
+    setError('')
+
+    const form = e.currentTarget
+    const data = Object.fromEntries(new FormData(form).entries())
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+      const body = await res.json().catch(() => ({}))
+      if (!res.ok) throw new Error(body.error || 'Something went wrong. Please try again.')
+      form.reset()
+      setStatus('sent')
+    } catch (err) {
+      setError(err.message)
+      setStatus('error')
+    }
   }
 
   return (
@@ -23,16 +41,27 @@ export default function Contact() {
           <div>
             <div className="kicker">Send a Message</div>
             <h2>Request a Consultation</h2>
-            {sent ? (
+            {status === 'sent' ? (
               <div className="value" style={{ marginTop: 20 }}>
                 <h3 style={{ color: 'var(--amber-dark)' }}>Thank you!</h3>
                 <p style={{ color: 'var(--muted)' }}>
-                  Your message has been captured. (This demo form isn't connected to a backend yet —
-                  ask your developer to wire it to an email service.)
+                  Your message has been sent — our team will get back to you shortly.
                 </p>
+                <button className="btn btn-dark" onClick={() => setStatus('idle')} style={{ marginTop: 8 }}>
+                  Send another message
+                </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
+                {/* Honeypot — hidden from humans, catches bots */}
+                <input
+                  type="text"
+                  name="company_website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
+                />
                 <div className="field">
                   <label htmlFor="name">Full Name</label>
                   <input id="name" name="name" required placeholder="Your name" />
@@ -49,9 +78,17 @@ export default function Contact() {
                   <label htmlFor="message">Message</label>
                   <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project" />
                 </div>
-                <button type="submit" className="btn btn-primary">Send Message</button>
+                {status === 'error' && (
+                  <p style={{ color: '#b3261e', margin: '0 0 12px', fontSize: '0.92rem' }}>{error}</p>
+                )}
+                <button type="submit" className="btn btn-primary" disabled={status === 'sending'}>
+                  {status === 'sending' ? 'Sending…' : 'Send Message'}
+                </button>
                 <p className="form-note" style={{ marginTop: 12 }}>
-                  We'll never share your details. Placeholder form — connect to a mail service to receive submissions.
+                  We'll never share your details. You can also email us at{' '}
+                  <a href={`mailto:${company.email}`} style={{ color: 'var(--amber-dark)', fontWeight: 600 }}>
+                    {company.email}
+                  </a>.
                 </p>
               </form>
             )}
