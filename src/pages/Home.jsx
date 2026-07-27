@@ -136,10 +136,16 @@ export default function Home() {
             <div className="kicker">Trusted By</div>
             <h2>Clients &amp; Partners</h2>
           </div>
-          <div className="clients-grid">
-            {clients.map((c) => (
-              <div className="client-logo" key={c}>{c}</div>
-            ))}
+          <div className="marquee">
+            <div className="marquee-track">
+              {[0, 1].map((g) => (
+                <div className="marquee-group" key={g} aria-hidden={g === 1}>
+                  {clients.map((c) => (
+                    <div className="client-logo" key={c}>{c}</div>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
