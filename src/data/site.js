@@ -11,7 +11,7 @@ export const company = {
   tagline: 'Construction & MEP Engineering',
   // One or two line elevator pitch used in hero / about intro.
   intro:
-    'Taaj Afro Asia is a specialist construction and MEP (Mechanical, Electrical & Plumbing) engineering contractor, delivering integrated building and facility solutions to international standards.',
+    'Taaj Afro Asia is a specialist construction and MEP (Mechanical, Electrical & Plumbing) engineering contractor, delivering integrated construction and engineering solutions to international standards.',
   email: 'info@taajafroasia.com',
   website: 'www.taajafroasia.com',
   websiteUrl: 'https://www.taajafroasia.com',
@@ -43,9 +43,9 @@ export const heroSlides = [
     bg: 'linear-gradient(120deg, rgba(26,50,46,0.92), rgba(36,67,63,0.66)), linear-gradient(120deg, #35625a, #1a322e)',
   },
   {
-    kicker: 'Facility Management',
-    title: 'Protecting the Value of Your Assets',
-    text: 'Proactive operations and maintenance that keep your facilities safe, efficient and compliant.',
+    kicker: 'Construction & Civil Works',
+    title: 'From Groundworks to Handover',
+    text: 'Turnkey construction and civil works delivered safely, on schedule and to specification.',
     bg: 'linear-gradient(120deg, rgba(20,40,36,0.93), rgba(36,67,63,0.66)), linear-gradient(120deg, #274a44, #142822)',
   },
 ]
@@ -86,39 +86,13 @@ export const services = [
       'Testing, commissioning & handover',
     ],
   },
-  {
-    slug: 'bim-engineering',
-    icon: 'cube',
-    title: 'BIM & Engineering',
-    summary:
-      'Tailored Building Information Modelling used as a practical workflow tool — not just a deliverable.',
-    points: [
-      'Coordinated 3D MEP modelling',
-      'Clash detection & resolution',
-      'Shop & as-built drawings',
-      'Quantity take-offs & scheduling',
-    ],
-  },
-  {
-    slug: 'facility-management',
-    icon: 'shield',
-    title: 'Facility Management',
-    summary:
-      'Comprehensive asset preservation and operations that optimise value for every stakeholder.',
-    points: [
-      'Planned preventive maintenance',
-      'Reactive & emergency response',
-      'Energy & efficiency optimisation',
-      'Compliance, HSE & reporting',
-    ],
-  },
 ]
 
 // Projects page — placeholder portfolio.
 export const projects = [
   { name: 'Commercial Tower — MEP Fit-out', sector: 'Commercial', status: 'Completed', location: 'Mogadishu' },
   { name: 'Residential Community', sector: 'Residential', status: 'Completed', location: 'Mogadishu' },
-  { name: 'Hospital Facility Services', sector: 'Healthcare', status: 'Ongoing', location: 'Mogadishu' },
+  { name: 'Hospital MEP Installation', sector: 'Healthcare', status: 'Ongoing', location: 'Mogadishu' },
   { name: 'Retail Mall HVAC Upgrade', sector: 'Retail', status: 'Completed', location: 'Mogadishu' },
   { name: 'Industrial Warehouse', sector: 'Industrial', status: 'Ongoing', location: 'Mogadishu' },
   { name: 'Hospitality Development', sector: 'Hospitality', status: 'Completed', location: 'Mogadishu' },
@@ -132,7 +106,7 @@ export const gallery = [
   { caption: 'HVAC Systems', tag: 'Mechanical', img: null },
   { caption: 'Electrical Works', tag: 'Electrical', img: null },
   { caption: 'Project Delivery', tag: 'Management', img: null },
-  { caption: 'Facility Maintenance', tag: 'Operations', img: null },
+  { caption: 'Civil & Structural Works', tag: 'Construction', img: null },
 ]
 
 // About page — values.
@@ -140,7 +114,7 @@ export const values = [
   { title: 'Quality', text: 'We deliver to international quality standards on every project, without compromise.' },
   { title: 'Safety', text: 'A zero-harm culture underpins how we plan, build and maintain.' },
   { title: 'Integrity', text: 'Transparent, dependable partnerships built on doing what we say we will.' },
-  { title: 'Innovation', text: 'We adopt modern tools like BIM to build smarter and reduce risk.' },
+  { title: 'Innovation', text: 'We adopt modern methods and engineering tools to build smarter and reduce risk.' },
 ]
 
 // Client logos band — text placeholders; replace with real logo images later.

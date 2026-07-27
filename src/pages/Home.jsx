@@ -67,9 +67,9 @@ export default function Home() {
             <h2>Delivering Construction &amp; Engineering Excellence</h2>
             <p className="lead">{company.intro}</p>
             <p>
-              From construction and MEP installation to long-term facility management, our teams
-              bring discipline, safety and modern engineering practice to every project — helping
-              clients build and operate spaces that perform.
+              From civil and construction works to complete MEP installation, our teams bring
+              discipline, safety and modern engineering practice to every project — helping
+              clients build spaces that perform.
             </p>
             <Link to="/about" className="btn btn-dark">More About Us</Link>
           </div>

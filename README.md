@@ -77,6 +77,34 @@ Already at `https://github.com/Vasan93/taajafroasia`.
 > Alternative: point GoDaddy's nameservers to Vercel's for full DNS management —
 > follow Vercel's on-screen instructions if you prefer that route.
 
+## Contact form → email (Resend)
+
+The contact form POSTs to a Vercel serverless function at
+[`api/contact.js`](api/contact.js), which emails submissions via
+[Resend](https://resend.com) (free tier: 3,000 emails/month). To turn it on:
+
+1. **Create a Resend account** at [resend.com](https://resend.com) and copy an
+   **API key** (starts with `re_`).
+2. **Verify your domain** in Resend → *Domains* → add `taajafroasia.com`. Resend
+   shows DNS records (SPF/DKIM). Add them in **GoDaddy → Manage DNS**, then wait
+   for Resend to mark the domain **Verified**. This lets email be sent *from*
+   your own domain.
+3. **Add environment variables** in Vercel → Project → *Settings → Environment
+   Variables* (Production):
+   - `RESEND_API_KEY` = your key  *(required)*
+   - `CONTACT_TO` = `info@taajafroasia.com`  *(optional; this is the default)*
+   - `CONTACT_FROM` = `Taaj Afro Asia <noreply@taajafroasia.com>`  *(set after
+     the domain is verified)*
+4. **Redeploy** (env-var changes apply on the next deploy): `vercel --prod`, or
+   push a commit / click *Redeploy* in Vercel.
+
+**Before the domain is verified**, Resend only lets you send test emails from
+`onboarding@resend.dev` to your own Resend account email — so for a quick test,
+temporarily set `CONTACT_TO` to that address.
+
+The function validates input, includes a honeypot for spam, and sets `reply_to`
+to the sender so you can reply directly from your inbox.
+
 ## Tech
 
 React 18 · React Router 6 · Vite 5 · plain CSS (no framework).

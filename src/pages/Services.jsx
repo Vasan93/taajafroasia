@@ -6,7 +6,7 @@ import { Icon } from '../components/Icons'
 export default function Services() {
   return (
     <>
-      <PageBanner title="Our Services" subtitle="Integrated MEP engineering, from design to long-term operation." />
+      <PageBanner title="Our Services" subtitle="Integrated construction and MEP engineering, delivered end to end." />
 
       <section className="section">
         <div className="container">
@@ -39,7 +39,7 @@ export default function Services() {
               { t: 'Consult', d: 'We listen to your requirements and assess the scope on site.' },
               { t: 'Engineer', d: 'Our team designs and models the optimal MEP solution.' },
               { t: 'Deliver', d: 'We install, test and commission to specification and schedule.' },
-              { t: 'Maintain', d: 'We keep systems running efficiently through the asset lifecycle.' },
+              { t: 'Handover', d: 'We test, commission and hand over, with support through the warranty period.' },
             ].map((v, n) => (
               <div className="value" key={v.t}>
                 <div className="n">0{n + 1}</div>
