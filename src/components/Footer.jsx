@@ -8,11 +8,8 @@ export default function Footer() {
       <div className="container">
         <div className="footer-top">
           <div>
-            <div className="brand" style={{ marginBottom: 16 }}>
-              <span className="brand-mark">TA</span>
-              <span className="brand-name">{company.name}</span>
-            </div>
-            <p style={{ fontSize: '0.93rem' }}>{company.intro}</p>
+            <img src="/images/logo.png" alt="Taaj Afro Asia" className="footer-logo" />
+            <p style={{ fontSize: '0.93rem', marginTop: 16 }}>{company.intro}</p>
           </div>
 
           <div>
@@ -21,7 +18,6 @@ export default function Footer() {
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/services">Services</Link></li>
               <li><Link to="/projects">Projects</Link></li>
-              <li><Link to="/careers">Careers</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
@@ -41,7 +37,11 @@ export default function Footer() {
               <div className="office" key={o.city}>
                 <strong>{o.city}</strong>
                 {o.address}<br />
-                <a href={`tel:${o.phone.replace(/\s/g, '')}`}>{o.phone}</a><br />
+                {o.phones.map((p) => (
+                  <span key={p}>
+                    <a href={`tel:${p.replace(/\s/g, '')}`}>{p}</a><br />
+                  </span>
+                ))}
                 <a href={`mailto:${o.email}`}>{o.email}</a>
               </div>
             ))}
@@ -50,7 +50,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <span>© {year} {company.name}. All rights reserved.</span>
-          <span>MEP Engineering · BIM · Facility Management</span>
+          <span>{company.tagline}</span>
         </div>
       </div>
     </footer>

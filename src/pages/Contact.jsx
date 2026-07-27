@@ -70,7 +70,12 @@ export default function Contact() {
                 </div>
                 <div className="row">
                   <span className="ic"><Icon.phone width={20} height={20} /></span>
-                  <div><h4>Phone</h4><p><a href={`tel:${o.phone.replace(/\s/g, '')}`}>{o.phone}</a></p></div>
+                  <div>
+                    <h4>Phone</h4>
+                    {o.phones.map((p) => (
+                      <p key={p}><a href={`tel:${p.replace(/\s/g, '')}`}>{p}</a></p>
+                    ))}
+                  </div>
                 </div>
                 <div className="row">
                   <span className="ic"><Icon.mail width={20} height={20} /></span>

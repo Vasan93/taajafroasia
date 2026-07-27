@@ -3,16 +3,17 @@
    ========================================================================== */
 
 :root {
-  --navy: #0a2540;
-  --navy-2: #123a5e;
-  --navy-deep: #071a2e;
-  --amber: #f2b705;
-  --amber-dark: #d99e00;
-  --ink: #1a2332;
-  --muted: #5b6b7d;
-  --line: #e4e9f0;
+  /* Brand: deep green + gold (from the Taaj Afro Asia letterhead) */
+  --navy: #24433f;        /* brand green */
+  --navy-2: #2f574f;      /* lighter green */
+  --navy-deep: #172f2b;   /* darker green */
+  --amber: #c9a24b;       /* brand gold */
+  --amber-dark: #9c7a2c;  /* darker gold (for text on light) */
+  --ink: #1f2a27;
+  --muted: #5f6f6a;
+  --line: #e6ebe9;
   --bg: #ffffff;
-  --bg-soft: #f5f8fc;
+  --bg-soft: #f4f7f5;
   --white: #ffffff;
   --radius: 14px;
   --shadow-sm: 0 2px 10px rgba(10, 37, 64, 0.06);
@@ -64,7 +65,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 .btn:hover { transform: translateY(-2px); }
-.btn-primary { background: var(--amber); color: var(--navy); box-shadow: 0 8px 20px rgba(242, 183, 5, 0.35); }
+.btn-primary { background: var(--amber); color: #24160a; box-shadow: 0 8px 20px rgba(201, 162, 75, 0.4); }
 .btn-primary:hover { background: var(--amber-dark); }
 .btn-outline { border-color: rgba(255, 255, 255, 0.7); color: #fff; }
 .btn-outline:hover { background: #fff; color: var(--navy); }
@@ -91,9 +92,9 @@ ul { margin: 0; padding: 0; list-style: none; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.18);
 }
 .nav {
   height: var(--header-h);
@@ -102,27 +103,18 @@ ul { margin: 0; padding: 0; list-style: none; }
   justify-content: space-between;
 }
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand-mark {
-  width: 42px; height: 42px; border-radius: 10px;
-  background: var(--navy);
-  color: var(--amber);
-  display: grid; place-items: center;
-  font-weight: 800; font-size: 1.1rem;
-  flex: none;
-}
-.brand-name { font-weight: 800; color: var(--navy); font-size: 1.15rem; letter-spacing: -0.01em; }
-.brand-name span { color: var(--amber-dark); }
+.brand-logo { height: 52px; width: auto; display: block; }
 .nav-links { display: flex; align-items: center; gap: 4px; }
 .nav-links a {
   padding: 9px 14px;
   border-radius: 8px;
   font-weight: 500;
-  color: var(--ink);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0.96rem;
   transition: color 0.2s, background 0.2s;
 }
-.nav-links a:hover { color: var(--navy); background: var(--bg-soft); }
-.nav-links a.active { color: var(--amber-dark); }
+.nav-links a:hover { color: #fff; background: rgba(255, 255, 255, 0.08); }
+.nav-links a.active { color: var(--amber); }
 .nav-cta { margin-left: 10px; }
 .nav-toggle {
   display: none;
@@ -130,7 +122,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   width: 44px; height: 44px; border-radius: 10px;
 }
 .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after {
-  content: ''; display: block; width: 22px; height: 2px; background: var(--navy);
+  content: ''; display: block; width: 22px; height: 2px; background: #fff;
   position: relative; transition: 0.2s; margin: 0 auto;
 }
 .nav-toggle span::before { position: absolute; top: -7px; }
@@ -139,6 +131,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* ---------- Hero ---------- */
 .hero { position: relative; color: #fff; overflow: hidden; }
 .hero-slide {
+  position: relative;
   min-height: calc(88vh - var(--header-h));
   display: flex;
   align-items: center;
@@ -146,7 +139,13 @@ ul { margin: 0; padding: 0; list-style: none; }
   background-position: center;
   transition: opacity 0.7s ease;
 }
-.hero-inner { max-width: 680px; padding: 60px 0; }
+.hero-slide::after {
+  content: ''; position: absolute; right: 4%; bottom: 0; width: 46%; height: 88%;
+  background: url(/images/mark-gold.png) center bottom / contain no-repeat;
+  opacity: 0.13; pointer-events: none;
+}
+@media (max-width: 720px) { .hero-slide::after { opacity: 0.08; width: 80%; } }
+.hero-inner { max-width: 680px; padding: 60px 0; position: relative; z-index: 2; }
 .hero .kicker { color: var(--amber); }
 .hero h1 { color: #fff; margin-bottom: 18px; }
 .hero p { font-size: 1.15rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 30px; max-width: 560px; }
@@ -175,20 +174,25 @@ ul { margin: 0; padding: 0; list-style: none; }
   overflow: hidden;
   box-shadow: var(--shadow);
 }
+/* Branded building motif fills the panel until a real photo is added. */
 .split .media::after {
-  content: 'Add photo';
-  position: absolute; inset: 0; display: grid; place-items: center;
-  color: rgba(255, 255, 255, 0.25); font-weight: 600; letter-spacing: 0.05em;
+  content: '';
+  position: absolute; inset: 0;
+  background: url(/images/mark-gold.png) center 62% / 46% auto no-repeat;
+  opacity: 0.9;
 }
+/* If the panel has a real photo, pass style={{ backgroundImage: 'url(...)' }} and add class .media--photo to hide the motif. */
+.media--photo { background-size: cover !important; background-position: center !important; }
+.media--photo::after { display: none; }
 .badge-since {
   position: absolute; left: 24px; bottom: 24px; z-index: 2;
-  background: var(--amber); color: var(--navy);
+  background: var(--amber); color: #24160a;
   padding: 14px 20px; border-radius: 12px; font-weight: 800;
 }
 .badge-since small { display: block; font-weight: 600; font-size: 0.72rem; opacity: 0.8; }
 
 /* ---------- Service cards ---------- */
-.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 26px; }
 .card {
   background: #fff;
   border: 1px solid var(--line);
@@ -223,18 +227,30 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* ---------- CTA band ---------- */
 .cta-band {
+  position: relative; overflow: hidden;
   background: linear-gradient(120deg, var(--navy), var(--navy-2));
   color: #fff; border-radius: 20px; padding: 54px; text-align: center;
   box-shadow: var(--shadow);
 }
+.cta-band::after {
+  content: ''; position: absolute; left: -40px; bottom: -50px; width: 260px; height: 260px;
+  background: url(/images/mark-gold.png) center / contain no-repeat; opacity: 0.10; pointer-events: none;
+}
+.cta-band > * { position: relative; z-index: 1; }
 .cta-band h2 { color: #fff; }
 .cta-band p { color: rgba(255, 255, 255, 0.85); max-width: 620px; margin: 0 auto 26px; }
 
 /* ---------- Page banner ---------- */
 .page-banner {
-  background: linear-gradient(120deg, rgba(10,37,64,0.9), rgba(10,37,64,0.75)), linear-gradient(120deg, #123a5e, #0a2540);
+  position: relative; overflow: hidden;
+  background: linear-gradient(120deg, rgba(23,47,43,0.92), rgba(36,67,63,0.80)), linear-gradient(120deg, #2f574f, #172f2b);
   color: #fff; padding: 72px 0;
 }
+.page-banner::after {
+  content: ''; position: absolute; right: -30px; bottom: -40px; width: 320px; height: 320px;
+  background: url(/images/mark-gold.png) center / contain no-repeat; opacity: 0.10; pointer-events: none;
+}
+.page-banner .container { position: relative; z-index: 1; }
 .page-banner h1 { color: #fff; margin-bottom: 10px; }
 .page-banner .crumbs { color: rgba(255, 255, 255, 0.75); font-size: 0.92rem; }
 .page-banner .crumbs a:hover { color: var(--amber); }
@@ -265,6 +281,26 @@ ul { margin: 0; padding: 0; list-style: none; }
 .proj .body { padding: 22px 24px; }
 .proj .body h3 { margin-bottom: 6px; font-size: 1.1rem; }
 .proj .body .meta { color: var(--muted); font-size: 0.9rem; }
+
+/* ---------- Gallery ---------- */
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.gtile {
+  position: relative; height: 240px; border-radius: var(--radius); overflow: hidden;
+  background: linear-gradient(150deg, var(--navy-2), var(--navy-deep));
+  box-shadow: var(--shadow-sm); background-size: cover; background-position: center;
+}
+.gtile::before {
+  content: ''; position: absolute; inset: 0;
+  background: url(/images/mark-gold.png) center 42% / 40% auto no-repeat; opacity: 0.85;
+}
+.gtile.has-photo::before { display: none; }
+.gtile::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(23,47,43,0.85), rgba(23,47,43,0) 55%);
+}
+.gtile .cap { position: absolute; left: 18px; right: 18px; bottom: 16px; z-index: 2; color: #fff; }
+.gtile .cap .t { display: inline-block; background: var(--amber); color: #24160a; font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; margin-bottom: 8px; }
+.gtile .cap h4 { color: #fff; margin: 0; font-size: 1.05rem; }
 
 /* ---------- Careers ---------- */
 .roles { display: grid; gap: 16px; }
@@ -302,7 +338,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .footer h4 { color: #fff; font-size: 1rem; margin-bottom: 18px; }
 .footer a { color: rgba(255, 255, 255, 0.75); }
 .footer a:hover { color: var(--amber); }
-.footer .brand-name { color: #fff; }
+.footer-logo { height: 58px; width: auto; }
 .footer .foot-links li { margin-bottom: 10px; }
 .footer .office { margin-bottom: 18px; font-size: 0.92rem; line-height: 1.5; }
 .footer .office strong { color: #fff; display: block; margin-bottom: 4px; }
@@ -316,6 +352,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 @media (max-width: 960px) {
   .split { grid-template-columns: 1fr; gap: 32px; }
   .cards, .proj-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .values-grid { grid-template-columns: repeat(2, 1fr); }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .clients-grid { grid-template-columns: repeat(3, 1fr); }
@@ -327,7 +364,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .nav-links {
     position: fixed; top: var(--header-h); left: 0; right: 0;
     flex-direction: column; align-items: stretch; gap: 0;
-    background: #fff; border-bottom: 1px solid var(--line);
+    background: var(--navy); border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 12px 24px 20px; box-shadow: var(--shadow);
     transform: translateY(-140%); transition: transform 0.25s ease; z-index: 40;
   }
@@ -335,7 +372,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .nav-links a { padding: 13px 8px; border-radius: 8px; }
   .nav-cta { margin: 8px 0 0; }
   .nav-toggle { display: block; }
-  .cards, .proj-grid, .values-grid, .clients-grid, .footer-top { grid-template-columns: 1fr; }
+  .cards, .proj-grid, .values-grid, .clients-grid, .footer-top, .gallery-grid { grid-template-columns: 1fr; }
   .cta-band { padding: 40px 24px; }
   .section { padding: 60px 0; }
   .role { flex-direction: column; align-items: flex-start; }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { company, heroSlides, stats, services, clients } from '../data/site'
+import { company, heroSlides, stats, services, clients, gallery } from '../data/site'
 import { Icon } from '../components/Icons'
 
 function Hero() {
@@ -64,21 +64,16 @@ export default function Home() {
         <div className="container split">
           <div>
             <div className="kicker">Who We Are</div>
-            <h2>Delivering Engineering Excellence Since {company.established}</h2>
+            <h2>Delivering Construction &amp; Engineering Excellence</h2>
             <p className="lead">{company.intro}</p>
             <p>
-              From design and installation to long-term facility management, our teams bring
-              discipline, safety and modern engineering practice to every project — helping
+              From construction and MEP installation to long-term facility management, our teams
+              bring discipline, safety and modern engineering practice to every project — helping
               clients build and operate spaces that perform.
             </p>
             <Link to="/about" className="btn btn-dark">More About Us</Link>
           </div>
-          <div className="media">
-            <div className="badge-since">
-              <small>Established</small>
-              {company.established}
-            </div>
-          </div>
+          <div className="media" />
         </div>
       </section>
 
@@ -88,7 +83,7 @@ export default function Home() {
           <div className="section-head">
             <div className="kicker">What We Do</div>
             <h2>Our Core Services</h2>
-            <p className="lead">Integrated MEP solutions delivered under one accountable partner.</p>
+            <p className="lead">Integrated construction and MEP solutions delivered under one accountable partner.</p>
           </div>
           <div className="cards">
             {services.map((s) => {
@@ -109,12 +104,37 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Clients */}
+      {/* Gallery */}
       <section className="section">
         <div className="container">
           <div className="section-head">
+            <div className="kicker">Our Work</div>
+            <h2>From the Field</h2>
+            <p className="lead">A look at the construction and engineering work we deliver.</p>
+          </div>
+          <div className="gallery-grid">
+            {gallery.map((g) => (
+              <div
+                key={g.caption}
+                className={`gtile ${g.img ? 'has-photo' : ''}`}
+                style={g.img ? { backgroundImage: `url(${g.img})` } : undefined}
+              >
+                <div className="cap">
+                  <span className="t">{g.tag}</span>
+                  <h4>{g.caption}</h4>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Clients */}
+      <section className="section section-soft">
+        <div className="container">
+          <div className="section-head">
             <div className="kicker">Trusted By</div>
-            <h2>Clients & Partners</h2>
+            <h2>Clients &amp; Partners</h2>
           </div>
           <div className="clients-grid">
             {clients.map((c) => (
@@ -125,7 +145,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="section" style={{ paddingTop: 0 }}>
+      <section className="section">
         <div className="container">
           <div className="cta-band">
             <h2>Have a project in mind?</h2>

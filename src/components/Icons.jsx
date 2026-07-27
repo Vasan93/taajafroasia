@@ -17,6 +17,9 @@ export const Icon = {
   cube: (p) => (
     <svg {...base} {...p}><path d="M21 7.5 12 3 3 7.5 12 12l9-4.5z" /><path d="M3 7.5v9L12 21l9-4.5v-9" /><path d="M12 12v9" /></svg>
   ),
+  building: (p) => (
+    <svg {...base} {...p}><path d="M4 21V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16" /><path d="M14 21V9h5a1 1 0 0 1 1 1v11" /><path d="M2 21h20" /><path d="M8 8h2M8 12h2M8 16h2M17 13h.01M17 17h.01" /></svg>
+  ),
   shield: (p) => (
     <svg {...base} {...p}><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z" /><path d="m9 12 2 2 4-4" /></svg>
   ),

@@ -1,70 +1,78 @@
 // ============================================================================
 //  SITE CONTENT — edit everything here in one place.
-//  All text below is PLACEHOLDER content. Replace with your real details.
+//  Company details below are from the official Taaj Afro Asia letterhead.
+//  Marketing copy (stats, service descriptions, projects) is placeholder —
+//  replace with your real details when ready.
 // ============================================================================
 
 export const company = {
   name: 'Taaj Afro Asia',
   shortName: 'Taaj',
-  tagline: 'Delivering Engineering Excellence',
-  established: 2013,
+  tagline: 'Construction & MEP Engineering',
   // One or two line elevator pitch used in hero / about intro.
   intro:
-    'Taaj Afro Asia is a specialist MEP (Mechanical, Electrical & Plumbing) engineering and facility management contractor, delivering integrated building services to global standards across Africa and Asia.',
+    'Taaj Afro Asia is a specialist construction and MEP (Mechanical, Electrical & Plumbing) engineering contractor, delivering integrated building and facility solutions to international standards.',
   email: 'info@taajafroasia.com',
-  // Optional secondary email
-  careersEmail: 'careers@taajafroasia.com',
+  website: 'www.taajafroasia.com',
+  websiteUrl: 'https://www.taajafroasia.com',
 }
 
-// Offices shown in the footer and on the Contact page.
+// Office — from the official letterhead.
 export const offices = [
   {
     city: 'Head Office',
-    address: 'P.O. Box 00000, Building Name, Street, City',
-    phone: '+000 0 000 0000',
-    email: 'info@taajafroasia.com',
-  },
-  {
-    city: 'Regional Office',
-    address: 'P.O. Box 00000, Building Name, Street, City',
-    phone: '+000 0 000 0000',
+    address: '#701, Waaberi Mall, Makkah Almukarramah Road, Mogadishu, Somalia',
+    phones: ['+252 619 777161', '+252 770 709313'],
     email: 'info@taajafroasia.com',
   },
 ]
 
-// Hero carousel slides (homepage). `bg` is a CSS gradient placeholder —
-// swap for a real photo by using: backgroundImage: `url(/images/hero1.jpg)`.
+// Hero carousel slides (homepage). `bg` is a CSS gradient in brand colours —
+// swap for a real photo by appending: `, url(/images/hero1.jpg)`.
 export const heroSlides = [
   {
-    kicker: 'MEP Engineering',
-    title: 'Delivering Engineering Excellence',
-    text: 'Integrated mechanical, electrical and plumbing solutions engineered to global standards.',
-    bg: 'linear-gradient(120deg, rgba(10,37,64,0.88), rgba(10,37,64,0.65)), linear-gradient(120deg, #123a5e, #0a2540)',
+    kicker: 'Construction & MEP Engineering',
+    title: 'Building With Precision & Purpose',
+    text: 'Integrated construction and mechanical, electrical & plumbing solutions engineered to international standards.',
+    bg: 'linear-gradient(120deg, rgba(26,50,46,0.92), rgba(36,67,63,0.70)), linear-gradient(120deg, #2f574f, #1a322e)',
   },
   {
-    kicker: 'BIM & Design',
-    title: 'Building Smarter, From Concept to Handover',
-    text: 'Data-driven Building Information Modelling that removes clashes before they reach the site.',
-    bg: 'linear-gradient(120deg, rgba(10,37,64,0.88), rgba(10,37,64,0.6)), linear-gradient(120deg, #1c4b6b, #0a2540)',
+    kicker: 'MEP Building Services',
+    title: 'Engineering Systems That Perform',
+    text: 'Design, installation, testing and commissioning of complete MEP systems for every sector.',
+    bg: 'linear-gradient(120deg, rgba(26,50,46,0.92), rgba(36,67,63,0.66)), linear-gradient(120deg, #35625a, #1a322e)',
   },
   {
     kicker: 'Facility Management',
     title: 'Protecting the Value of Your Assets',
     text: 'Proactive operations and maintenance that keep your facilities safe, efficient and compliant.',
-    bg: 'linear-gradient(120deg, rgba(10,37,64,0.88), rgba(10,37,64,0.6)), linear-gradient(120deg, #0f3350, #071a2e)',
+    bg: 'linear-gradient(120deg, rgba(20,40,36,0.93), rgba(36,67,63,0.66)), linear-gradient(120deg, #274a44, #142822)',
   },
 ]
 
 // Homepage stats band.
 export const stats = [
-  { value: '10+', label: 'Years of Experience' },
   { value: '250+', label: 'Projects Delivered' },
   { value: '400+', label: 'Skilled Professionals' },
+  { value: '15+', label: 'Sectors Served' },
   { value: '99%', label: 'Client Retention' },
 ]
 
 // Core services — used on the homepage cards and the Services page.
 export const services = [
+  {
+    slug: 'construction-civil-works',
+    icon: 'building',
+    title: 'Construction & Civil Works',
+    summary:
+      'Turnkey construction and civil works — from fit-out and refurbishment to full build delivery.',
+    points: [
+      'Building construction & fit-out',
+      'Civil & structural works',
+      'Refurbishment & remodelling',
+      'Project & site management',
+    ],
+  },
   {
     slug: 'mep-building-services',
     icon: 'wrench',
@@ -108,12 +116,23 @@ export const services = [
 
 // Projects page — placeholder portfolio.
 export const projects = [
-  { name: 'Commercial Tower — MEP Fit-out', sector: 'Commercial', status: 'Completed', location: 'City, Country' },
-  { name: 'Residential Community', sector: 'Residential', status: 'Completed', location: 'City, Country' },
-  { name: 'Hospital Facility Services', sector: 'Healthcare', status: 'Ongoing', location: 'City, Country' },
-  { name: 'Retail Mall HVAC Upgrade', sector: 'Retail', status: 'Completed', location: 'City, Country' },
-  { name: 'Industrial Warehouse', sector: 'Industrial', status: 'Ongoing', location: 'City, Country' },
-  { name: 'Hospitality Resort', sector: 'Hospitality', status: 'Completed', location: 'City, Country' },
+  { name: 'Commercial Tower — MEP Fit-out', sector: 'Commercial', status: 'Completed', location: 'Mogadishu' },
+  { name: 'Residential Community', sector: 'Residential', status: 'Completed', location: 'Mogadishu' },
+  { name: 'Hospital Facility Services', sector: 'Healthcare', status: 'Ongoing', location: 'Mogadishu' },
+  { name: 'Retail Mall HVAC Upgrade', sector: 'Retail', status: 'Completed', location: 'Mogadishu' },
+  { name: 'Industrial Warehouse', sector: 'Industrial', status: 'Ongoing', location: 'Mogadishu' },
+  { name: 'Hospitality Development', sector: 'Hospitality', status: 'Completed', location: 'Mogadishu' },
+]
+
+// Gallery strip — image tiles. Drop real photos in /public/images and set
+// `img` to e.g. '/images/gallery-1.jpg' to replace the branded placeholder.
+export const gallery = [
+  { caption: 'On-Site Construction', tag: 'Construction', img: null },
+  { caption: 'MEP Installation', tag: 'Engineering', img: null },
+  { caption: 'HVAC Systems', tag: 'Mechanical', img: null },
+  { caption: 'Electrical Works', tag: 'Electrical', img: null },
+  { caption: 'Project Delivery', tag: 'Management', img: null },
+  { caption: 'Facility Maintenance', tag: 'Operations', img: null },
 ]
 
 // About page — values.
@@ -122,14 +141,6 @@ export const values = [
   { title: 'Safety', text: 'A zero-harm culture underpins how we plan, build and maintain.' },
   { title: 'Integrity', text: 'Transparent, dependable partnerships built on doing what we say we will.' },
   { title: 'Innovation', text: 'We adopt modern tools like BIM to build smarter and reduce risk.' },
-]
-
-// Careers — open roles (placeholder).
-export const openRoles = [
-  { title: 'MEP Project Engineer', type: 'Full-time', location: 'Head Office' },
-  { title: 'HVAC Technician', type: 'Full-time', location: 'Site' },
-  { title: 'BIM Modeller (MEP)', type: 'Full-time', location: 'Head Office' },
-  { title: 'Facility Management Supervisor', type: 'Full-time', location: 'Site' },
 ]
 
 // Client logos band — text placeholders; replace with real logo images later.

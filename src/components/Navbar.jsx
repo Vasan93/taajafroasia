@@ -1,13 +1,11 @@
 import { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
-import { company } from '../data/site'
 
 const links = [
   { to: '/', label: 'Home', end: true },
   { to: '/about', label: 'About Us' },
   { to: '/services', label: 'Services' },
   { to: '/projects', label: 'Projects' },
-  { to: '/careers', label: 'Careers' },
   { to: '/contact', label: 'Contact' },
 ]
 
@@ -18,9 +16,8 @@ export default function Navbar() {
   return (
     <header className="header">
       <div className="container nav">
-        <Link to="/" className="brand" onClick={close}>
-          <span className="brand-mark">TA</span>
-          <span className="brand-name">Taaj <span>Afro Asia</span></span>
+        <Link to="/" className="brand" onClick={close} aria-label="Taaj Afro Asia — home">
+          <img src="/images/logo.png" alt="Taaj Afro Asia" className="brand-logo" />
         </Link>
 
         <nav className={`nav-links ${open ? 'open' : ''}`}>
