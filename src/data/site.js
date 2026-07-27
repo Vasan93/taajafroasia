@@ -52,10 +52,10 @@ export const heroSlides = [
 
 // Homepage stats band.
 export const stats = [
-  { value: '250+', label: 'Projects Delivered' },
-  { value: '400+', label: 'Skilled Professionals' },
-  { value: '15+', label: 'Sectors Served' },
-  { value: '99%', label: 'Client Retention' },
+  { value: '25+', label: 'Projects Delivered' },
+  { value: '40+', label: 'Skilled Professionals' },
+  { value: '8+', label: 'Sectors Served' },
+  { value: '100%', label: 'Commitment to Quality' },
 ]
 
 // Core services — used on the homepage cards and the Services page.
