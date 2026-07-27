@@ -27,26 +27,24 @@ export const offices = [
   },
 ]
 
-// Hero carousel slides (homepage). `bg` layers a dark overlay over a scene image
-// so the headline stays readable. Swap the url for your own photo any time.
+// Hero carousel slides (homepage). Only the text changes per slide; the scene
+// image and dark overlay are styled in index.css (.hero-slide / ::before) so the
+// image always scales to cover and stays readable on every screen size.
 export const heroSlides = [
   {
     kicker: 'Construction & MEP Engineering',
     title: 'Building With Precision & Purpose',
     text: 'Integrated construction and mechanical, electrical & plumbing solutions engineered to international standards.',
-    bg: 'linear-gradient(120deg, rgba(23,47,43,0.92), rgba(36,67,63,0.62)), url(/images/scene-hero.svg)',
   },
   {
     kicker: 'MEP Building Services',
     title: 'Engineering Systems That Perform',
     text: 'Design, installation, testing and commissioning of complete MEP systems for every sector.',
-    bg: 'linear-gradient(120deg, rgba(23,47,43,0.90), rgba(47,87,79,0.60)), url(/images/scene-hero.svg)',
   },
   {
     kicker: 'Construction & Civil Works',
     title: 'From Groundworks to Handover',
     text: 'Turnkey construction and civil works delivered safely, on schedule and to specification.',
-    bg: 'linear-gradient(120deg, rgba(20,40,36,0.93), rgba(36,67,63,0.58)), url(/images/scene-hero.svg)',
   },
 ]
 

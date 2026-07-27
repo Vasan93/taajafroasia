@@ -13,7 +13,7 @@ function Hero() {
 
   return (
     <section className="hero">
-      <div className="hero-slide" style={{ background: slide.bg }}>
+      <div className="hero-slide">
         <div className="container">
           <div className="hero-inner">
             <div className="kicker">{slide.kicker}</div>

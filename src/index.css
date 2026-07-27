@@ -135,11 +135,16 @@ ul { margin: 0; padding: 0; list-style: none; }
   min-height: calc(88vh - var(--header-h));
   display: flex;
   align-items: center;
-  background-size: cover;
-  background-position: center;
-  transition: opacity 0.7s ease;
+  /* Scene image scaled to cover; overlay lives in ::before so it stays readable
+     and can be tuned per breakpoint. */
+  background: url(/images/scene-hero.svg) center center / cover no-repeat;
 }
-.hero-slide { background-size: cover; background-position: center; }
+.hero-slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(23, 47, 43, 0.90), rgba(36, 67, 63, 0.58));
+}
 .hero-inner { max-width: 680px; padding: 60px 0; position: relative; z-index: 2; }
 .hero .kicker { color: var(--amber); }
 .hero h1 { color: #fff; margin-bottom: 18px; }
@@ -378,6 +383,10 @@ ul { margin: 0; padding: 0; list-style: none; }
     transform: translateY(-140%); transition: transform 0.25s ease; z-index: 40;
   }
   .nav-links.open { transform: translateY(0); }
+  /* Hero: fill with the scene, shift to the crane, and lighten the overlay so
+     it isn't a flat dark block on narrow screens. */
+  .hero-slide { min-height: calc(74vh - var(--header-h)); background-position: 64% center; }
+  .hero-slide::before { background: linear-gradient(160deg, rgba(23, 47, 43, 0.80), rgba(36, 67, 63, 0.48)); }
   .nav-links a { padding: 13px 8px; border-radius: 8px; }
   .nav-cta { margin: 8px 0 0; }
   .nav-toggle { display: block; }
